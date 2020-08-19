@@ -1,0 +1,57 @@
+body{
+    background-image: url('img/beach.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+#krans{
+    transition: transform .8s ease-in-out;
+}
+
+#krans:hover{
+    transform: rotate(360deg);
+}
+
+#stjerne{
+    transition: opacity 2s;
+    opacity: 0;
+}
+
+#stjerne:hover{
+    opacity: 1;
+}
+
+@keyframes surfslidein{
+    from{
+        transform: translateX(100%)
+    }
+
+    to{
+        transform: translateX(0%)
+    }
+}
+
+#surf{
+    animation-name: surfslidein;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes surfslideout{
+    form{
+        transform: translateX(0%)
+    }
+
+    to{
+        transform: translateX(100%)
+    }
+
+}
+
+#surf:hover{
+    animation-name: surfslideout;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
